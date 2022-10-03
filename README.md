@@ -7,7 +7,7 @@ We've created a simple React project to get you started with a simple Mock API t
 
 What we're looking for:
 
-- A great user experience. Feel free to import any UI component libraries you're familier with or do it all in HTML+CSS - we don't mind either.
+- A great user experience. Feel free to import any UI component libraries you're familiar with or do it all in HTML+CSS - we don't mind either.
 - Quality over quantity. A small amount of well-coded work is better than a lot of partialy-working code.
 - Use of React components using hooks
 - Production-ready code: no debugger statements or console.logs()!
