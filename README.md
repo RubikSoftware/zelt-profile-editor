@@ -3,7 +3,7 @@
 We want you to build a simple profile editor, allowing users to view and edit
 their Zelt User Profile.
 
-A simple Mock API is included which allows you to get and set user information.
+We've created a simple React project to get you started with a simple Mock API to allow you to get and set user information.
 
 What we're looking for:
 
