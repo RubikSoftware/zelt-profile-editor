@@ -4,7 +4,7 @@ export type Profile = {
   dob: string;
   profilePictureURL: string | null;
   salary: number;
-  // add it any other fields that make sense for a user profile
+  // add in any other fields that make sense for a user profile
 };
 
 let profile: Profile = {
