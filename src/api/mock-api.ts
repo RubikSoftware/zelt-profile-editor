@@ -2,17 +2,18 @@ export type Profile = {
   firstName: string;
   lastName: string;
   dob: string;
-  profilePictureURL: string | null;
+  profilePictureURL: string;
   salary: number;
-  // add in any other fields that make sense for a user profile
+  city: string;
 };
 
 let profile: Profile = {
   firstName: "Dua",
   lastName: "Clipa",
   dob: "1995-08-22",
-  profilePictureURL: null,
+  profilePictureURL: "https://i.postimg.cc/CKCgkKqV/profile.jpg",
   salary: 40000,
+  city: "London",
 };
 
 export function getUserProfile() {
@@ -24,7 +25,7 @@ export function getUserProfile() {
 export function setUserProfile(newProfile: Profile) {
   return new Promise<"OK">((resolve) => {
     setTimeout(() => {
-      const { firstName, lastName, dob, profilePictureURL, salary } =
+      const { firstName, lastName, dob, profilePictureURL, salary, city } =
         newProfile;
       profile = {
         firstName,
@@ -32,6 +33,7 @@ export function setUserProfile(newProfile: Profile) {
         dob,
         profilePictureURL,
         salary,
+        city,
       };
       resolve("OK");
     }, 2e3);
