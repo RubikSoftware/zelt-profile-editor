@@ -22,8 +22,7 @@ export type FormProps = Omit<
   >;
   children?: React.FC<DefiniteFormikProps>;
 
-  /** @deprecated use formNodeProps */
-  oldCss?: any; // "css" prop not working for unknown reasons
+  oldCss?: any;
 };
 
 export const Form: React.FC<FormProps> = ({
