@@ -1,0 +1,14 @@
+.field-container {
+  display: flex;
+  align-items: center;
+  line-height: 56px;
+}
+
+.field-label {
+  margin-right: 3vw;
+  min-width: 10vw;
+}
+
+.field-value {
+  padding-left: 14px;
+}
