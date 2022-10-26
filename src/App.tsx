@@ -1,23 +1,17 @@
-import React, { useEffect } from "react";
-import { getUserProfile, setUserProfile } from "./api/mock-api";
-import ProfileView from "./profile";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import PersonalData from './pages/PersonalData';
+import ContractData from './pages/ContractData';
+import NotFound from './pages/NotFound';
+import { Navbar } from './common/components';
 
-function App() {
-  useEffect(() => {
-    getUserProfile();
-  });
+const drawerWidth = 240;
+export default function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <ProfileView getProfile={getUserProfile} updateProfile={setUserProfile} />
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <Navbar drawerWidth={drawerWidth} />
+      
+    </Box>
   );
 }
-
-export default App;
