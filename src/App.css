@@ -1,0 +1,9 @@
+.box-container {
+  margin-left: 30px;
+}
+
+@media only screen and (max-width: 800px) {
+  .box-container {
+    margin-left: 0px;
+  }
+}

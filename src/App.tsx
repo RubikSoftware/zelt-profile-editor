@@ -1,23 +1,34 @@
-import React, { useEffect } from "react";
-import { getUserProfile, setUserProfile } from "./api/mock-api";
-import ProfileView from "./profile";
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import PersonalData from './pages/PersonalData';
+import ContractData from './pages/ContractData';
+import NotFound from './pages/NotFound';
+import { Navbar } from './common/components';
+import { DRAWER_WIDTH } from './common/constants';
+import './App.css';
 
-function App() {
-  useEffect(() => {
-    getUserProfile();
-  });
+export default function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <ProfileView getProfile={getUserProfile} updateProfile={setUserProfile} />
-    </div>
+    <Box sx={{ display: 'flex' }}>
+      <Navbar />
+      <Box
+        className="box-container"
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
+          mt: 10,
+          width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
+        }}
+      >
+        <Routes>
+          <Route path={'/personal'} element={<PersonalData />} />
+          <Route path={'/contract'} element={<ContractData />} />
+          <Route path={'/'} element={<Navigate replace to="/personal" />} />
+          <Route path={'*'} element={<NotFound />} />
+        </Routes>
+      </Box>
+    </Box>
   );
 }
-
-export default App;

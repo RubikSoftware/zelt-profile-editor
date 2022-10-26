@@ -1,15 +1,24 @@
 # Zelt Profile Editor
 
-We want you to build a simple profile editor, allowing users to view and edit
-their Zelt User Profile.
 
-We've created a simple React project to get you started with a simple Mock API to allow you to get and set user information.
+Here is Zelt Profile Editor! This task is done considering User experience, and the Zelt product you showed in our interview. So I decided to create different pages for user data
 
-What we're looking for:
+- Personal Data: containing First name, Last Name, Date of Birth
+- Contract Data: Salary, bonus, Start Date, and leave dates
 
-- A great user experience. Feel free to import any UI component libraries you're familiar with or do it all in HTML+CSS - we don't mind either.
-- Quality over quantity. A small amount of well-coded work is better than a lot of partially-working code.
-- Use of React components using hooks
-- Production-ready code: no debugger statements or console.logs()!
+I applied the same changes to the API. The reason for this implementation is that I think it's something that users are familiar with, and it's in accordance with your product as well.
 
-To get started: run `npm start` in this folder and navigate to `http://localhost:3000`. The rest is up to you!
+Similar extra fields can be added easily to both pages. I skipped this part as I thought you also wanted to receive the task in just a couple of days.
+
+Another feature that I worked on was data caching of requests. Thereby, users will not face any delays every time they switch pages, and will improve their experiences. To achieve this goal, I installed redux and stored fetched data there.
+
+The task is designed and implemented to support different screens and will work smoothly on devices from mobile phones to desktops.
+
+In terms of the UI library, I installed MUI. Further improvements for User experience, such as notifications, are also implemented to show submission messages whenever the user updates the forms.
+
+
+Some tests for both pages have also been added to test initial data fetching, the correct preview of elements on the screen, and suitable changes to each input element and button based on the user's interaction.
+
+### Future improvements
+
+We can add more diverse fields for each page, in addition to writing more tests for components to cover edge cases.

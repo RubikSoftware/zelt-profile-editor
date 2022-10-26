@@ -1,0 +1,11 @@
+#Button {
+  width: 100px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  #Button {
+    margin-left: 0px;
+    margin-bottom: 20px;
+  }
+}
