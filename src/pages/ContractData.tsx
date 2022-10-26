@@ -49,7 +49,7 @@ const ContractData = () => {
         id={'salary'}
         type={'number'}
         value={updatedContract?.salary}
-        label={'salary'}
+        label={'Salary'}
         handleChange={handleChange}
       />
       <CustomizedField
@@ -57,7 +57,7 @@ const ContractData = () => {
         id={'bonus'}
         type={'number'}
         value={updatedContract?.bonus}
-        label={'bonus'}
+        label={'Bonus'}
         handleChange={handleChange}
       />
       <CustomizedField
