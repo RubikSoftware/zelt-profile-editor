@@ -5,13 +5,13 @@ import PersonalData from './pages/PersonalData';
 import ContractData from './pages/ContractData';
 import NotFound from './pages/NotFound';
 import { Navbar } from './common/components';
+import { DRAWER_WIDTH } from './common/constants';
 import './App.css';
 
-const drawerWidth = 240;
 export default function App() {
   return (
     <Box sx={{ display: 'flex' }}>
-      <Navbar drawerWidth={drawerWidth} />
+      <Navbar />
       <Box
         className="box-container"
         component="main"
@@ -19,7 +19,7 @@ export default function App() {
           flexGrow: 1,
           p: 3,
           mt: 10,
-          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          width: { sm: `calc(100% - ${DRAWER_WIDTH}px)` },
         }}
       >
         <Routes>

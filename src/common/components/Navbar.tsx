@@ -21,15 +21,16 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import { useTheme } from '@material-ui/core/styles';
 
+import { DRAWER_BACKGROUND_COLOR, DRAWER_WIDTH } from '../constants';
+
 interface Props {
   window?: () => Window;
-  drawerWidth: number;
 }
 
 export default function ResponsiveDrawer(props: Props) {
   const location = useLocation();
   const theme = useTheme();
-  const { window, drawerWidth } = props;
+  const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -116,10 +117,10 @@ export default function ResponsiveDrawer(props: Props) {
       <Box
         component="nav"
         sx={{
-          width: { sm: drawerWidth },
+          width: { sm: DRAWER_WIDTH },
           flexShrink: { sm: 0 },
         }}
-        aria-label="mailbox folders"
+        aria-label="profile menu"
       >
         <Drawer
           container={container}
@@ -133,8 +134,8 @@ export default function ResponsiveDrawer(props: Props) {
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
-              width: drawerWidth,
-              backgroundColor: 'rgb(204,224,241)',
+              width: DRAWER_WIDTH,
+              backgroundColor: DRAWER_BACKGROUND_COLOR,
             },
           }}
         >
@@ -146,8 +147,8 @@ export default function ResponsiveDrawer(props: Props) {
             display: { xs: 'none', sm: 'block' },
             '& .MuiDrawer-paper': {
               boxSizing: 'border-box',
-              width: drawerWidth,
-              backgroundColor: 'rgb(204,224,241)',
+              width: DRAWER_WIDTH,
+              backgroundColor: DRAWER_BACKGROUND_COLOR,
             },
           }}
           open
